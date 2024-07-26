@@ -1,0 +1,22 @@
+{
+  "name": "feiyu-proxy",
+  "version": "2.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "tsup",
+    "start": "npm run build && vercel dev",
+    "server": "node server.js",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  }
+}

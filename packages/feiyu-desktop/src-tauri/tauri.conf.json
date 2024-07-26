@@ -1,0 +1,107 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "productName": "飞鱼",
+  "version": "1.0.0",
+  "identifier": "xbox.work.feiyu",
+  "build": {
+    "beforeDevCommand": "cd ../feiyu && pnpm dev:desktop",
+    "devUrl": "http://localhost:3000",
+    "frontendDist": "../../feiyu/dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "title": "飞鱼",
+        "width": 950,
+        "height": 650,
+        "minWidth": 310,
+        "minHeight": 600,
+        "shadow": false,
+        "center": true,
+        "decorations": false,
+        "transparent": true,
+        "hiddenTitle": true,
+        "titleBarStyle": "Overlay"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "plugins": {
+    "updater": {
+      "active": true,
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEQ3MDIyQ0IxQTBDRjZBNUEKUldSYWFzK2dzU3dDMTY0MjJtVFA2ZnVLK0NZWUl6MlV0ejdJSCtzMHQvV3RtcG1LZDJYcGFjdUoK",
+      "endpoints": [
+        "https://github.com/idootop/feiyu-player/releases/download/updater/latest.json"
+      ]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "copyright": "Copyright © 2023 Del.Wang",
+    "shortDescription": "一个漂亮得不像实力派的在线视频播放器 ✨",
+    "longDescription": "The light and shadow, a brighter world to see.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "entitlements": null,
+      "frameworks": [],
+      "providerShortName": null,
+      "signingIdentity": null,
+      "dmg": {
+        "background": "images/dmg-background.jpg",
+        "appPosition": {
+          "x": 180,
+          "y": 170
+        },
+        "applicationFolderPosition": {
+          "x": 480,
+          "y": 170
+        },
+        "windowSize": {
+          "height": 400,
+          "width": 660
+        }
+      }
+    },
+    "windows": {
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "",
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      },
+      "wix": {
+        "language": ["zh-CN"],
+        "bannerPath": "images/wix_banner.png",
+        "dialogImagePath": "images/wix_dialog.png"
+      },
+      "nsis": {
+        "headerImage": "images/nsis_header.bmp",
+        "sidebarImage": "images/nsis_sidebar.bmp",
+        "installerIcon": "icons/icon.ico",
+        "languages": ["SimpChinese"]
+      }
+    },
+    "linux": {
+      "deb": {
+        "depends": ["libwebkit2gtk-4.1-dev"]
+      },
+      "rpm": {
+        "depends": ["webkit2gtk4.1-devel"]
+      },
+      "appimage": {
+        "bundleMediaFramework": true
+      }
+    }
+  }
+}

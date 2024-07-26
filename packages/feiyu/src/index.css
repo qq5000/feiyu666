@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+:root {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+body {
+  --color-bg-card: rgb(var(--gray-1));
+  --color-border: #ebecf0;
+}
+
+body[arco-theme='dark'] {
+  --color-bg-card: var(--color-bg-3);
+  --color-border: #2e2e31;
+}
+
+a:focus,
+input:focus,
+p:focus,
+div:focus {
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+.arco-dropdown {
+  z-index: 2;
+}

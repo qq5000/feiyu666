@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "name": "默认订阅",
+  "feiyu": {
+    "proxy": "https://example.vercel.app/api/proxy",
+    "ipfs": {
+      "gateway": "https://nftstorage.link/ipfs/{{cid}}",
+      "token": "eyJhb...xxx"
+    },
+    "videoSources": [
+      {
+        "key": "视频源1",
+        "api": "https://api1.example.com/api.php/provide/vod/at/xml"
+      },
+      {
+        "key": "视频源2",
+        "api": "https://api2.example.com/api.php/provide/vod/at/xml"
+      }
+    ],
+    "hotMovies": [
+      {
+        "id": "26302614",
+        "isNew": false,
+        "title": "请回答1988",
+        "cover": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2272563445.jpg",
+        "rate": "9.7"
+      },
+      {
+        "id": "25848328",
+        "isNew": false,
+        "title": "最后生还者 第一季",
+        "cover": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2884221114.jpg",
+        "rate": "9.1"
+      }
+    ]
+  }
+}
